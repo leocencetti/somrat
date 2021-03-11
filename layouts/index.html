@@ -7,17 +7,30 @@
   <div class="logo">
     <img class="img-fluid" src="{{ site.Params.logo_light | relURL }}" alt="{{ site.Title }}">
   </div>
-  <div class="slider-prev-button slider-button">
-    <i class="fa fa-angle-left"></i>
-  </div>
-  <div class="slider-next-button slider-button">
-    <i class="fa fa-angle-right"></i>
-  </div>
-  <div class="owl-carousel owl-full-width owl-theme" id="background-slide">
-    {{ range .Params.slider_images }}
-    <div class="slider"><img class="img-fluid" src="{{ . | absURL }}" alt="slider-background"></div>
+<!--  <div class="slider-prev-button slider-button">-->
+<!--    <i class="fa fa-angle-left"></i>-->
+<!--  </div>-->
+<!--  <div class="slider-next-button slider-button">-->
+<!--    <i class="fa fa-angle-right"></i>-->
+<!--  </div>-->
+<!--  <div class="owl-carousel owl-full-width owl-theme" id="background-slide">-->
+<!--    {{ range .Params.slider_images }}-->
+<!--    <div class="slider"><img class="img-fluid" src="{{ . | absURL }}" alt="slider-background"></div>-->
+<!--    {{ end }}-->
+<!--  </div>-->
+  {{ with .Site.Params.videoBackground }}
+        <video class="video" autoplay muted preload loop playsinline>
+            {{ range .sources }}
+                <source
+                    src="{{ .source }}"
+                    type="{{ .type }}"
+                    poster="{{ .poster }}" />
+            {{ end }}
+        </video>
+<!--        {{ with .overlay }}-->
+<!--            <div id="overlay" style="background: {{ . | safeCSS }};"></div>-->
+<!--        {{ end }}-->
     {{ end }}
-  </div>
   <div class="container">
     <div class="row content">
       <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
@@ -130,7 +143,7 @@
           </div>
         </a>
         <div class="mobile-menu-logo"><a href="{{site.BaseURL | relLangURL }}"><img class="img-fluid"
-              src="{{ site.Params.logo_dark | absURL }}" alt="{{ site.Title }}"></a>
+              src="{{ site.Params.logo_dark_short | absURL }}" alt="{{ site.Title }}"></a>
         </div>
         <div class="menu-slider">
           <nav>

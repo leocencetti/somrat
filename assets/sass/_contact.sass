@@ -1,0 +1,200 @@
+/*--------------------------------
+ * Start Contact
+ *--------------------------------*/
+
+.contact
+  background: $background-grey
+  /* Fallback Background */
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  position: relative
+
+
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    right: 0
+    top: 0
+    left: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.5)
+    z-index: 1
+
+
+.contact-holder
+  margin-top: 120px
+  position: relative
+  z-index: 2
+
+
+.contact-holder h1
+  position: relative
+  text-align: center
+  color: $white
+  font-weight: 700
+  letter-spacing: 2px
+
+  &:before
+    content: ""
+    position: absolute
+    top: -8px
+    right: 6px
+    left: 0
+    margin: auto
+    width: 47px
+    height: 5px
+    background: $white
+
+
+.form-container
+  margin-top: 40px
+
+
+.form-container .form-control
+  border: 0
+  border-radius: 0
+  height: 47px
+
+
+.form-container .help-block,
+.form-container .with-errors
+  color: $white
+
+
+.form-container textarea.form-control
+  height: auto
+
+
+input.form-control::-webkit-input-placeholder,
+textarea.form-control::-webkit-input-placeholder,
+.submit
+  font-weight: 700
+  font-size: 16px
+  color: $background-grey
+
+
+.submit
+  width: 120px
+  margin: auto
+  display: block
+
+
+.hvr-icon-push:before
+  content: "\f1d8"
+  right: 19px
+  font-family: 'Font Awesome 5 Free'
+  font-weight: 900
+
+
+.footer
+  padding-top: 50px
+  padding-bottom: 70px
+  position: relative
+  z-index: 2
+
+
+.footer-bg
+  background-color: $background-grey
+
+
+.footer hr
+  border: 1px solid $white
+  margin-bottom: 5px
+
+
+.footer-icons
+  display: -webkit-inline-box
+  display: -ms-inline-flexbox
+  display: inline-flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  width: 210px
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin-top: 15px
+  @media (max-width: 300px)
+    width: 100%
+
+
+.footer-icons div
+  display: inline-block
+
+
+.footer-icons a,
+.to-top a
+  text-decoration: none
+  color: $background-grey
+  font-size: 17px
+
+
+.footer-icons .fab.fa-facebook-f
+  padding: 7px 10px
+
+
+.footer-icons .fab,
+.to-top .fa
+  -webkit-transition: all 0.3s
+  transition: all 0.3s
+  background: $white
+  padding: 7px
+
+
+.footer-icons .fab:hover
+  -webkit-transform: translateY(5px)
+  transform: translateY(5px)
+
+
+.to-top
+  display: inline
+  float: right
+  margin-top: 15px
+  -webkit-transition: -webkit-transform 0.3s
+  transition: -webkit-transform 0.3s
+  transition: transform 0.3s
+  transition: transform 0.3s, -webkit-transform 0.3s
+
+
+.no-js .to-top
+  position: fixed
+  right: 15px
+  bottom: 20px
+
+
+.to-top:hover
+  -webkit-transform: translateY(-5px)
+  transform: translateY(-5px)
+
+
+.credit
+  position: absolute
+  bottom: 15px
+  left: 0
+  right: 0
+  text-align: center
+  color: $white
+
+
+.content.text-white *
+  color: $white
+
+
+.z-index-9
+  z-index: 9
+
+
+.footer-icons .fa
+  @media (max-width: 300px)
+    margin-bottom: 10px
+
+
+/*--------------------------------
+ * End Contact
+ *--------------------------------*/

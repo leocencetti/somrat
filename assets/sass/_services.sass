@@ -1,0 +1,142 @@
+/*--------------------------------
+ *  Start Services
+ *--------------------------------*/
+
+.services
+  background: $white
+  padding: 70px 0px
+  @media (max-width: 767px)
+    padding: 70px 0px 0px 0px
+  @media (min-width: 768px) and (max-width: 991px)
+    padding: 70px 0px 35px 0px
+
+
+.services-heading
+  position: relative
+
+
+.services-heading h1
+  color: $medium-grey
+  text-align: center
+  font-weight: 700
+  letter-spacing: 4px
+  margin-bottom: 80px
+  position: relative
+
+  &:before
+    content: ""
+    position: absolute
+    top: -8px
+    right: 0
+    left: 0
+    margin: auto
+    width: 70px
+    height: 5px
+    background: $medium-grey
+
+  @media (max-width: 475px)
+    margin-bottom: 80px
+
+
+.services-icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  position: relative
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin-bottom: 30px
+  padding-bottom: 40px
+
+
+.service-img
+  width: 100px
+  margin: auto
+
+
+.services-icon img
+  width: 100%
+  @media(min-width: 526px) and (max-width: 767px)
+    width: 100%
+
+
+.service-label
+  position: absolute
+  left: 0
+  right: 0
+  top: 100px
+  text-align: center
+  font-weight: 700
+  letter-spacing: -0.5px
+  font-size: 19px
+  @media(min-width: 526px) and (max-width: 767px)
+    top: 110px
+    letter-spacing: 0
+    font-size: 17px
+
+
+.need-service
+  width: 100%
+  background: $background-grey
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  position: relative
+  text-align: center
+
+
+.overlay
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    left: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.5)
+
+
+.need-service h1
+  position: relative
+  color: $white
+  font-weight: 700
+  margin: 0
+  font-size: 40px
+  letter-spacing: 2px
+  z-index: 2
+
+
+.need-service a
+  position: relative
+  z-index: 2
+  text-decoration: none
+  color: $background-grey
+  font-weight: bold
+  font-size: 17px
+  margin-top: 14px
+  display: inline-block
+  background: $white
+  padding: 10px 19px
+  border-radius: 25px
+  transition: background 0.5s
+
+  &:hover
+    background: transparent
+    color: $white
+    border: 2px solid $white
+    padding: 8px 17px
+
+
+@media (max-width: 525px)
+  .min-width-bar
+    left: 40%
+    right: 40%
+
+
+/*--------------------------------
+ * End Services
+ *--------------------------------*/

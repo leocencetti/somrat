@@ -1,0 +1,257 @@
+@import "vars"
+@import "preloader"
+@import "header"
+@import "menu"
+@import "about"
+@import "contact"
+@import "portfolio"
+@import "services"
+@import "testimonials"
+@import "video"
+/*--------------------------------
+ * Start Menu
+ *--------------------------------*/
+
+@media (max-width: 991px)
+  .desktop-menu
+    width: 95%
+    margin-left: 10px
+
+
+@media (max-width: 800px)
+  .desktop-menu
+    display: none
+
+
+  .mobile-menu
+    display: block
+
+
+  .menu-container
+    justify-content: flex-end
+    padding: 0 20px
+    height: 0
+    background: $white
+
+
+  .desktop-menu-logo
+    display: none
+
+
+  .menu-container-transparent
+    background: rgb(255, 255, 255)
+
+
+@media (min-width: 601px) and (max-width: 991px)
+  .menu-container
+    justify-content: flex-start
+
+
+@media(min-width: 601px)
+  .mobile-menu-fix
+    display: none
+
+
+/*--------------------------------
+ * End Menu
+ *--------------------------------*/
+
+/*--------------------------------
+ * Start About Me
+ *--------------------------------*/
+
+@media (max-width: 767px)
+  .about-me-text
+    display: block
+    height: auto
+    margin-bottom: 30px
+    -webkit-order: 2
+    -moz-order: 2
+    -ms-order: 2
+    -o-order: 2
+    order: 2
+
+
+  .about-me-image
+    -webkit-order: 1
+    -moz-order: 1
+    -ms-order: 1
+    -o-order: 1
+    order: 1
+    margin-bottom: 30px
+
+
+  .about-me-holder
+    display: flex
+    flex-wrap: wrap
+
+
+  .experience-skill
+    margin-top: 10px
+
+
+  .experience-chart,
+  .skill-progress-bar
+    margin-top: 25px
+
+
+  .skill
+    margin-top: 30px
+
+
+  .skillbar
+    margin-bottom: 15px
+
+
+@media (min-width: 601px) and (max-width: 991px)
+  .about-me
+    padding: 125px 0 35px 0
+
+
+@media (max-width: 600px)
+  .about-me
+    padding: 70px 0 0 0
+
+/* new css */
+
+/* Button style */
+.btn
+  padding: 10px 15px
+  border-radius: 0
+  border: 1px solid
+  position: relative
+  z-index: 1
+  transition: .2s ease
+
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn:focus,
+.btn.focus
+  outline: 0
+  box-shadow: none !important
+
+
+.btn-primary
+  background: $dark-grey
+  color: $white
+  border-color: $dark-grey
+
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:focus,
+.btn-primary.focus
+  background: $dark-grey !important
+  border-color: $dark-grey !important
+
+
+.btn-outline-primary
+  background: transparent
+  color: $dark-grey
+  border-color: #2B2C2F
+
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary:focus,
+.btn-outline-primary.focus
+  background: $dark-grey !important
+  border-color: $dark-grey !important
+  color: $white
+
+
+/* blog */
+
+.card
+  border: 0
+  border-radius: 0
+
+
+.card-img-top
+  border-radius: 0
+  transition: .2s ease
+
+
+.card-body
+  padding: 15px 0
+
+
+.card-title
+  color: $medium-grey
+
+
+.card-title:hover
+  color: $medium-grey
+
+
+.card-img-wrapper
+  overflow: hidden
+  display: block
+
+
+.card:hover .card-img-top
+  transform: scale(1.2)
+
+
+/* pagination */
+.pagination
+  justify-content: center
+  display: flex
+  padding-left: 0
+
+
+.pagination .page-item
+  list-style-type: none
+
+
+.pagination .page-item .page-link
+  display: inline-block
+  width: 40px
+  line-height: 1.3
+  height: 40px
+  border-radius: 0
+  border: 1px solid $light-grey
+  text-align: center
+  margin-right: 6px
+  font-weight: 600
+  color: $dark-grey
+
+
+.pagination .page-item .page-link:hover
+  background: $dark-grey
+  color: $white
+
+
+.pagination .page-item.active .page-link
+  background: $dark-grey
+  color: $white
+  border-color: $dark-grey
+
+
+/* tags */
+.tags
+  font-size: 20px
+
+
+/* widget */
+
+.widget
+  margin-bottom: 20px
+
+
+.widget-list a
+  font-size: 18px
+  padding: 4px 0
+  display: block
+  color: $medium-grey
+
+
+.widget-img
+  height: 70px
+  width: 85px
+  object-fit: cover
+  margin-right: 10px

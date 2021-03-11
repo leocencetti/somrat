@@ -27,8 +27,6 @@ unsafe= true
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
-link = "https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap"
-[[params.plugins.css]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
 [[params.plugins.css]]
 link = "plugins/hover/hover.css"
@@ -74,7 +72,7 @@ author = "somrat"
 [params.preloader]
 enable = true
 preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
-  
+
 ############################# social site ########################
 [[params.social]]
 icon = "fab fa-facebook-f"
