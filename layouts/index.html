@@ -223,7 +223,7 @@
             <div class="single-experience">
               <h4>{{ .name | markdownify }}</h4>
               {{ with .company }} <span>{{ . | markdownify }}</span> {{ end }}
-              {{ with .duration }} <span>{{ . | markdownify }}</span> {{ end }}
+              {{ with .duration }} <span>| {{ . | markdownify }}</span> {{ end }}
               {{ with .content }} <p>{{ . | markdownify}}</p> {{ end }}
             </div>
           </li>
@@ -273,7 +273,7 @@
             {{ range .Params.service_list }}
             <div class="col-lg-4 col-sm-4 col-12 services-icon">
               <div class="service-img">
-                <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name | markdownify }}">
+                <img class="img-fluid" src="images/icons/background.png" style="-webkit-mask-image: url({{ .image | absURL }}); -webkit-mask-size: contain;" alt="{{ .name | markdownify }}">
               </div>
               <div class="service-label">{{ .name | markdownify }}</div>
             </div>
