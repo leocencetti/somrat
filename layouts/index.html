@@ -47,7 +47,7 @@
           </div>
           {{ with .Params.button }}
           {{ if .enable }}
-          <a class="hireMe" href="{{ .link | relURL}}">{{ .label }}</a>
+          <a class="hireMe capsule" href="{{ .link | relURL}}">{{ .label }}</a>
           {{ end }}
           {{ end }}
         </div>
@@ -85,7 +85,7 @@
             <div class="full-nav-icon-holder">
               <ul class="full-nav-icons list-inline">
                 {{ range site.Params.social }}
-                <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+                <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }} capsule"></i></a></li>
                 {{ end }}
               </ul>
             </div>
@@ -200,7 +200,7 @@
           <div class="content">{{ .Content | markdownify | emojify }}</div>
           {{ with .Params.button }}
           {{ if .enable }}
-          <a href="{{ .link | absURL }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+          <a href="{{ .link | absURL }}" class="download-cv hvr-icon-hang capsule"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
           {{ end }}
           {{ end }}
         </div>
@@ -296,7 +296,7 @@
     {{ with .Content }}<div class="text-white content">{{ . | markdownify }}</div> {{ end }}
     {{ with .Params.button }}
     {{ if .enable }}
-    <a href="{{ .link | absURL}}">{{ .label }}</a>
+    <a href="{{ .link | relURL}}">{{ .label }}</a>
     {{ end }}
     {{ end }}
   </div>
@@ -404,7 +404,8 @@
     <div class="fun-facts wow fadeInUp" data-wow-duration="1.5s">
       {{ range .Params.funfacts }}
       <div class="fun-fact-holder">
-        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
+        <img class="img-fluid" src="images/icons/background.png" style="-webkit-mask-image: url({{ .image | absURL }}); -webkit-mask-size: contain;" alt="{{ .name | markdownify }}">
+<!--        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">-->
         <p class="fact-counter count" data-count="{{ .count }}">0</p>
         <p>{{ .name }}</p>
       </div>
@@ -451,11 +452,11 @@
         <hr>
         <ul class="footer-icons list-inline">
           {{ range site.Params.social }}
-          <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+          <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }} capsule"></i></a></li>
           {{ end }}
         </ul>
         <div class="to-top">
-          <a href="#home"><i class="fa fa-chevron-up"></i></a>
+          <a href="#home"><i class="fa fa-chevron-up capsule"></i></a>
         </div>
         <div class="credit content">
           {{ site.Params.copyright | markdownify }}
