@@ -447,6 +447,7 @@
                         placeholder="{{.Params.message}}"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
+                        <div class="form-group col-lg-12 g-recaptcha" data-sitekey="{{ .Site.Params.recaptchaSiteKey }}"></div> <!-- replace with your recaptcha SITE key not secret key -->
                         <div class="form-group col-lg-12 sub-button">
                             <button class="submit form-control hvr-icon-push" type="submit" value="send"> {{.Params.submit}} </button>
                         </div>
