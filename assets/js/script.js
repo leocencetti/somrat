@@ -1,24 +1,6 @@
 (function ($) {
 	'use strict';
 
-	/*--------------------------------
-	 Start Preloader Animation
-	----------------------------------*/
-	$(window).on('load', function () {
-		$('.preloader').fadeOut(100);
-		makeRecaptchaRequired()
-	});
-
-	function makeRecaptchaRequired() {
-	    var el = document.getElementById('g-recaptcha-response');
-	  	if (el) {
-			el.setAttribute('required', 'required');
-	  	}
-    }
-	/*--------------------------------
-        End Preloader Animation
-    ----------------------------------*/
-
 	// -----------------------------
 	//  Count Up
 	// -----------------------------
@@ -48,6 +30,7 @@
 			});
 		}
 	}
+
 	// -----------------------------
 	//  On Scroll
 	// -----------------------------
