@@ -306,12 +306,14 @@
 		});
 		// Removing Full-Screen Nav
 		$(".navigation-icon").css("display", "none");
+		$(".randomize-color").css("display", "none");
 	}
 
 	// Code For UC Browser
 	if (navigator.userAgent.indexOf('UCBrowser') != -1) {
 		// Removing Full-Screen Nav
 		$(".navigation-icon").css("display", "none");
+		$(".randomize-color").css("display", "none");
 		$(".fun-facts").css({
 			"display": "table",
 			"margin": "auto"

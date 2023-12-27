@@ -7,6 +7,10 @@
 {{ $script := resources.Get "js/script.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
 
+{{ "<!-- Orbs Script -->" | safeHTML }}
+{{ $orb_script := resources.Get "js/orbs.js" | minify}}
+<script type="module" src="{{ $orb_script.Permalink }}"></script>
+
 {{ "<!-- google analitycs -->" | safeHTML }}
 {{ with site.Params.google_analitycs_id}}
 <script>
