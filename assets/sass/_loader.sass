@@ -1,40 +1,43 @@
 $size: 30vh
 $position: calc(50% - #{$size}/2)
 $hue: var(--hue)
+$color: hsl($hue, 95%, 50%)
 
 .loader
-  width: $size
-  height: $size
-  border-radius: 50%
-  position: absolute
-  top: $position
-  left: $position
-  background: linear-gradient(180deg, hsla($hue, 95%, 50%, 0.2) 33%, hsl($hue, 95%, 50%) 100%)
-  animation: rotation 1s linear infinite, colorshift 5s linear infinite alternate
-  box-shadow: 0 6px 32px hsla($hue, 95%, 50%, 0.7)
+  position: relative
+  animation: flix 3s ease-in infinite alternate
 
-  &::after
-    content: ""
-    position: absolute
-    margin: 2px 2px
-    width: calc(#{$size} - 4px)
-    height: calc(#{$size} - 4px)
+  &:before
+    content: ''
+    display: block
+    font-size: 0
+    width: $size
+    height: $size
+    background-color: #fff
+    background-image: radial-gradient(circle calc(#{$size} * 0.25) at calc(#{$size} * 0.45) calc(#{$size} * 0.45), $color 100%, transparent 0), radial-gradient(circle calc(#{$size} * 0.3) at calc(#{$size} / 8) calc(#{$size} * 0.8), $color 100%, transparent 0), radial-gradient(circle calc(#{$size} * 0.29) at calc(#{$size} * 0.4) calc(-#{$size} * 0.12), $color 100%, transparent 0), radial-gradient(circle calc(#{$size} * 0.1) at calc(#{$size} * 0.8) calc(#{$size} * 0.4), $color 100%, transparent 0)
     border-radius: 50%
-    background: $background-grey
+    animation: rotate 1s linear infinite
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0%
+    transform: translate(-50% , -100%)
+    left: 50%
+    width: calc(#{$size}/2)
+    height: calc(#{$size}/4)
+    background: #fff
+    border-radius: 50px 50px 0 0
 
 .done
   display: none !important
 
-@keyframes rotation
-  0%
-    transform: rotate(0deg)
+@keyframes flix
+  0%, 60%
+    transform: rotate(-10deg)
+  100%, 30%, 80%
+    transform: rotate(5deg)
 
+@keyframes rotate
   100%
     transform: rotate(360deg)
-
-@keyframes colorshift
-  0%
-    filter: hue-rotate(0deg)
-
-  100%
-    filter: hue-rotate(60deg)
