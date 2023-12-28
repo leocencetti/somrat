@@ -1,0 +1,621 @@
+/*--------------------------------
+ *  Start Header
+ *--------------------------------*/
+
+/* ========= Header ======= */
+
+.header
+  /*background: $background-grey*/
+  /*background-repeat: no-repeat*/
+  /*background-position: center center*/
+  /*background-size: cover*/
+  /*background-attachment: fixed*/
+  position: relative
+  height: 100%
+  min-height: 420px
+  overflow: hidden
+
+
+#particles-js
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+
+
+.logo
+  position: absolute
+  z-index: 10
+  top: 40px
+  left: 40px
+
+
+.no-js .logo
+  display: none
+
+
+.logo img
+  width: 205px
+
+
+.owl-carousel.owl-full-width
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  margin: 0
+  overflow: hidden
+
+
+.owl-carousel.owl-full-width .slider
+  position: relative
+  width: 100%
+  height: 100%
+
+
+.owl-carousel.owl-full-width .slider img
+  display: none
+
+
+.owl-full-width div
+  height: 100%
+
+
+.header .slider::after,
+.header::after
+  content: ''
+  position: absolute
+  right: 0
+  top: 0
+  left: 0
+  bottom: 0
+  margin: auto
+  width: 100%
+  height: 100%
+  background: rgba(50, 50, 50, .6)
+  z-index: 9
+
+
+.slider-button
+  position: absolute
+  top: 49%
+  height: 35px
+  width: 35px
+  z-index: 10
+  border-radius: 100%
+  text-align: center
+  font-size: 29px
+  border: 2px solid $light-grey
+  color: $light-grey
+  opacity: 0
+  cursor: pointer
+  transition: all 0.5s
+
+  &:hover
+    background: $light-grey
+    color: $white
+
+.slider-prev-button
+  left: 40px
+  transform: translateX(15px)
+
+
+.slider-next-button
+  right: 40px
+  transform: translateX(-15px)
+
+
+.header:hover .slider-button
+  opacity: 1
+  transform: translateX(0)
+
+
+.slider-prev-button .fa
+  position: relative
+  top: -6px
+  left: -2px
+
+
+.slider-next-button .fa
+  position: relative
+  top: -6px
+  left: 2px
+
+
+.head-container
+  display: table
+  position: absolute
+  top: 0
+  height: 100%
+  color: white
+  font-size: 30px
+  font-family: $font !important
+  font-weight: 300
+  z-index: 10
+
+
+.head-holder
+  display: table-cell
+  vertical-align: middle
+
+
+.introduction
+  font-size: 60px
+  font-weight: 600
+  @media(max-width: 550px) and (min-height: 501px)
+    font-size: 45px
+    margin-bottom: 5px
+
+
+.typist-blink:after
+  content: " "
+  display: inline-block
+
+
+.typist-blink > .selectedText
+  display: none
+
+
+.head-holder .hireMe
+  display: inline-block
+  background: transparent
+  margin-top: 18px
+  text-decoration: none
+  color: white
+  font-family: $font
+  font-size: 19px
+  font-weight: 500
+  border: 2px solid white
+  padding: 5px 18px
+  -webkit-transition: all 0.2s
+  transition: all 0.2s
+  @media(max-width: 550px) and (min-height: 501px)
+    margin-top: 10px
+    font-size: 18px
+    padding: 3px 12px
+
+
+  &:hover
+    background: $medium-grey
+    color: $white
+    border: 2px solid $medium-grey
+
+
+input + label
+  position: absolute
+  top: 40px
+  right: 40px
+  height: 20px
+  width: 34px
+  z-index: 12
+
+
+.no-js input + label
+  display: none
+
+
+#burger
+  display: none
+
+
+input + label span
+  position: absolute
+  width: 100%
+  height: 4px
+  top: 50%
+  margin-top: -1px
+  left: 0
+  display: block
+  background: $white
+  -webkit-transition: .5s
+  transition: .5s
+
+  &:first-child
+    top: 0
+
+  &:last-child
+    top: 19px
+
+
+.navigation-icon:hover .burger-menu span
+  background: $medium-grey
+
+
+label:hover
+  cursor: pointer
+
+
+input:checked + label span
+  opacity: 0
+  top: 50%
+  background: $medium-grey
+
+
+input:checked + label span:first-child
+  opacity: 1
+  -webkit-transform: rotate(405deg)
+  transform: rotate(405deg)
+
+
+input:checked + label span:last-child
+  opacity: 1
+  -webkit-transform: rotate(-405deg)
+  transform: rotate(-405deg)
+
+
+/* ========= Full Screen Navigation ======= */
+
+.fullscreen-nav-container
+  position: absolute
+  top: 0
+  overflow: hidden
+  height: 100%
+  width: 100%
+  display: none
+  z-index: 11
+  color: $white
+  font-family: $font
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    left: 0
+    bottom: 0
+    margin: auto
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.7)
+    z-index: -1
+
+.fullscreen-nav-container .container-fluid
+  height: 100%
+
+
+.no-js .fullscreen-nav-container
+  display: none
+
+
+.full-nav-container
+  height: 100%
+  @media (min-width: 728px) and (max-height: 470px)
+    margin-top: 20px
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    margin-top: 20px
+  @media (max-height: 535px) and (max-width: 468px)
+    margin-top: 20px
+
+
+.full-nav-holder
+  height: 100%
+  display: table
+  width: 100%
+  margin: auto
+
+
+.full-nav-content
+  display: table-cell
+  vertical-align: middle
+
+
+.name
+  text-align: center
+  @media (max-width: 470px)
+    margin-top: 100px
+  @media (max-height: 535px) and (max-width: 468px)
+    text-align: left
+
+.first-name
+  font-size: 50px
+  font-weight: 400
+  padding-bottom: 20px
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    display: inline-block
+    font-size: 35px
+    margin: 0
+  @media (max-height: 535px) and (max-width: 468px)
+    display: inline-block
+    font-size: 35px
+    margin: 0
+
+.last-name
+  font-size: 100px
+  font-weight: 600
+  line-height: 1
+  margin-bottom: 42px
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    display: inline-block
+    font-size: 35px
+    margin: 0
+  @media (max-height: 535px) and (max-width: 468px)
+    display: inline-block
+    font-size: 35px
+    margin: 0
+
+.occupation
+  font-size: 18px
+  font-weight: 400
+  height: 30px
+  overflow: hidden
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    font-size: 15px
+  @media (max-height: 535px) and (max-width: 468px)
+    font-size: 15px
+
+
+.fulscreen-nav
+  margin-top: 50px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    margin-top: 25px
+
+
+.fullscreen-nav-holder
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  width: 100%
+  -ms-flex-pack: distribute
+  justify-content: space-around
+  @media (min-width: 100px) and (max-width: 767px)
+    flex-direction: column
+    align-items: center
+
+
+.fullscreen-nav-holder div
+  margin: 0 10px
+  -webkit-transition: -webkit-transform 0.2s
+  transition: -webkit-transform 0.2s
+  transition: transform 0.2s
+
+
+  &:hover
+    -webkit-transform: translateY(5px)
+    transform: translateY(5px)
+
+  @media (min-width: 470px) and (max-width: 727px)
+    margin-bottom: 15px
+
+
+.fullscreen-nav-holder a
+  color: white
+  font-family: $font
+  font-size: 20px
+  font-weight: 500
+  text-decoration: none
+
+
+.full-nav-icon-holder
+  width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  margin-top: 50px
+
+  @media (min-width: 470px) and (max-width: 727px)
+    margin-top: 15px
+  @media (min-width: 469px) and (max-width: 727px) and (max-height: 500px)
+    margin-top: 0
+    margin-bottom: 10px
+
+.full-nav-icons
+  display: -webkit-inline-box
+  display: -ms-inline-flexbox
+  display: inline-flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  width: 300px
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin-top: 15px
+
+
+.full-nav-icons div
+  display: inline-block
+
+
+.full-nav-icons a,
+.to-top a
+  text-decoration: none
+  color: $background-grey
+  font-size: 17px
+
+
+.full-nav-icons .fab.fa-facebook-f
+  padding: 7px 10px
+
+
+.full-nav-icons .fab,
+.to-top .fab
+  -webkit-transition: all 0.3s
+  transition: all 0.3s
+  background: $white
+  padding: 7px
+
+
+.full-nav-icons .fab:hover
+  -webkit-transform: translateY(5px)
+  transform: translateY(5px)
+
+
+.animated-text
+  @media(max-width: 550px) and (min-height: 501px)
+    font-size: 21px
+    margin-top: 7px
+    margin-bottom: 2px
+
+
+.fullscreen-nav-holder li a
+  @media (min-width: 100px) and (max-width: 767px)
+    display: block
+    padding: 10px
+
+
+@media (max-height: 535px) and (max-width: 468px)
+  .fullscreen-nav-holder div
+    margin-bottom: 15px
+    margin: 0
+    margin-bottom: 15px
+    width: 100%
+    text-align: left
+
+
+  .fulscreen-nav
+    margin-top: 25px
+
+
+  .full-nav-icon-holder
+    margin-top: -5px
+    width: 70%
+    justify-content: flex-start
+
+
+  .full-nav-holder
+    padding-left: 20px
+    display: block
+
+
+  .full-nav-content
+    display: block
+
+
+@media (max-width: 469px) and (min-height: 536px)
+  .fullscreen-nav-holder div
+    margin-bottom: 15px
+    margin: 0
+    margin-bottom: 15px
+    width: 100%
+    text-align: center
+
+
+  .full-nav-icon-holder
+    margin-top: 15px
+
+
+  .full-nav-container
+    margin-top: 20px
+
+
+  .first-name
+    font-size: 35px
+
+
+  .last-name
+    font-size: 70px
+    font-weight: 600
+    line-height: 0
+    margin-top: 28px
+    margin-bottom: 28px
+
+
+  .occupation
+    font-size: 14px
+
+
+  .fullscreen-nav
+    margin-top: 35px
+
+
+  .full-nav-holder
+    display: block
+
+
+  .full-nav-content
+    display: block
+
+
+@media (max-width: 767px)
+  .logo
+    left: 10px
+
+
+  .header .logo img
+    width: 185px
+
+
+@media (max-width: 880px)
+  .slider-button
+    display: none
+
+
+@media (max-width: 990px)
+  .header
+    background-position: center
+
+
+@media (min-height: 301px) and (max-height: 500px)
+  .introduction
+    font-size: 35px
+
+
+  .animated-text
+    font-size: 18px
+
+
+  .head-holder .hireMe
+    margin-top: 10px
+    font-size: 16px
+    padding: 3px 12px
+
+
+@media (max-height: 300px)
+  .introduction
+    font-size: 35px
+
+
+  .animated-text
+    font-size: 18px
+
+
+  .head-holder .hireMe
+    margin-top: 10px
+    font-size: 16px
+    padding: 3px 12px
+
+
+  .head-container
+    display: block
+    margin-top: 130px
+    margin-bottom: 50px
+    height: auto
+
+
+@media(max-width: 468px) and (max-height: 440px)
+  .full-nav-container
+    margin-bottom: 30px
+
+
+  .fullscreen-nav-container
+    position: absolute
+    top: 0
+    bottom: 100%
+    width: 100%
+    height: 447px
+
+
+@media (max-height: 430px)
+  .fullscreen-nav-container
+    min-height: 420px
+
+/*--------------------------------
+ *  End Header
+ *--------------------------------*/

@@ -17,12 +17,10 @@
   {{ end }}
 
   <!-- Main Stylesheet -->
-  {{ $styles := resources.Get "css/style.css" | minify }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{ partial "head/css.html" . }}
 
-  <!-- Custom stylesheet -->
-  {{ $custom := resources.Get "css/custom.css" | minify }}
-  <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+  <!-- Google Fonts -->
+  {{ partial "head/fonts.html" . }}
 
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
@@ -39,6 +37,7 @@
   <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
   {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/google_analytics.html" . }}
-
+<!--  {{ template "_internal/google_analytics.html" . }}-->
+  {{ partial "head/analytics_gtag.html" . }}
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
