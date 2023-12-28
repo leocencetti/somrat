@@ -4,8 +4,8 @@
 {{ with .GetPage "banner" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="header {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="home">
-    <div class="logo">
-        <img class="img-fluid" src="{{ site.Params.logo_light | relURL }}" alt="{{ site.Title }}">
+    <div class="logo" style="-webkit-mask-image: url({{ site.Params.logo_light | relURL }}); mask-image: url({{ site.Params.logo_light | relURL }});">
+        <img class="img-fluid" src="{{ site.Params.logo_light | relURL }}" style="opacity: 0%;" alt="{{ site.Title }}">
     </div>
     <!--  <div class="slider-prev-button slider-button">-->
     <!--    <i class="fa fa-angle-left"></i>-->
@@ -18,19 +18,10 @@
     <!--    <div class="slider"><img class="img-fluid" src="{{ . | absURL }}" alt="slider-background"></div>-->
     <!--    {{ end }}-->
     <!--  </div>-->
-    {{ with .Site.Params.videoBackground }}
-    <video class="video" autoplay muted preload loop playsinline>
-        {{ range .sources }}
-        <source
-                src="{{ .source }}"
-                type="{{ .type }}"
-                poster="{{ .poster }}" />
-        {{ end }}
-    </video>
-    <!--        {{ with .overlay }}-->
-    <!--            <div id="overlay" style="background: {{ . | safeCSS }};"></div>-->
-    <!--        {{ end }}-->
-    {{ end }}
+
+    <!-- Orb canvas -->
+    <canvas class="orb-canvas video"></canvas>
+
     <div class="container">
         <div class="row content">
             <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
@@ -56,6 +47,9 @@
     </div>
 
     <!-- full nav start -->
+    <div class="randomize-colors conic">
+        <button class="overlay__btn overlay__btn--colors"></button>
+    </div>
     <div class="navigation-icon">
         <input id="burger" type="checkbox" />
         <label for="burger" class="burger-menu">
@@ -142,8 +136,10 @@
                         <span></span>
                     </div>
                 </a>
-                <div class="mobile-menu-logo"><a href="{{site.BaseURL | relLangURL }}"><img class="img-fluid"
-                                                                                            src="{{ site.Params.logo_dark_short | absURL }}" alt="{{ site.Title }}"></a>
+                <div class="mobile-menu-logo" style="-webkit-mask-image: url({{ site.Params.logo_dark_short | absURL }}); mask-image: url({{ site.Params.logo_dark_short | absURL }});">
+                    <a href="{{site.BaseURL | relLangURL }}">
+                        <img class="img-fluid" src="{{ site.Params.logo_dark_short | absURL }}" style="opacity: 0%;" alt="{{ site.Title }}">
+                    </a>
                 </div>
                 <div class="menu-slider">
                     <nav>
@@ -273,8 +269,8 @@
                     <div class="row">
                         {{ range .Params.service_list }}
                         <div class="col-lg-4 col-sm-4 col-12 services-icon">
-                            <div class="service-img">
-                                <img class="img-fluid" src="images/icons/background.png" style="-webkit-mask-image: url({{ .image | absURL }}); -webkit-mask-size: contain;" alt="{{ .name | markdownify }}">
+                            <div class="service-img" style="-webkit-mask-image: url({{ .image | absURL }}); mask-image: url({{ .image | absURL }});">
+                                <img class="img-fluid" src="{{ .image | absURL }}" style="opacity: 0%;" alt="{{ .name | markdownify }}">
                             </div>
                             <div class="service-label">{{ .name | markdownify }}</div>
                         </div>
@@ -409,8 +405,8 @@
         {{ end }}
         <div class="fun-facts wow fadeInUp" data-wow-duration="1.5s">
             {{ range .Params.funfacts }}
-            <div class="fun-fact-holder">
-                <img class="img-fluid" src="images/icons/background.png" style="-webkit-mask-image: url({{ .image | absURL }}); -webkit-mask-size: contain;" alt="{{ .name | markdownify }}">
+            <div class="fun-fact-holder" style="-webkit-mask-image: url({{ .image | absURL }}); mask-image: url({{ .image | absURL }});">
+                <img class="img-fluid" src="{{ .image | absURL }}" style="opacity: 0%;" alt="{{ .name | markdownify }}">
                 <!--        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">-->
                 <p class="fact-counter count" data-count="{{ .count }}">0</p>
                 <p>{{ .name }}</p>

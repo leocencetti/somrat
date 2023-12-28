@@ -29,6 +29,27 @@
   top: 40px
   left: 40px
 
+.randomize-colors
+  background: conic-gradient(hsl(0deg, 100%, 50%), hsl(10deg, 100%, 50%), hsl(20deg, 100%, 50%), hsl(30deg, 100%, 50%), hsl(40deg, 100%, 50%), hsl(50deg, 100%, 50%), hsl(60deg, 100%, 50%), hsl(70deg, 100%, 50%), hsl(80deg, 100%, 50%), hsl(90deg, 100%, 50%), hsl(100deg, 100%, 50%), hsl(110deg, 100%, 50%), hsl(120deg, 100%, 50%), hsl(130deg, 100%, 50%), hsl(140deg, 100%, 50%), hsl(150deg, 100%, 50%), hsl(160deg, 100%, 50%), hsl(170deg, 100%, 50%), hsl(180deg, 100%, 50%), hsl(190deg, 100%, 50%), hsl(200deg, 100%, 50%), hsl(210deg, 100%, 50%), hsl(220deg, 100%, 50%), hsl(230deg, 100%, 50%), hsl(240deg, 100%, 50%), hsl(250deg, 100%, 50%), hsl(260deg, 100%, 50%), hsl(270deg, 100%, 50%), hsl(280deg, 100%, 50%), hsl(290deg, 100%, 50%), hsl(300deg, 100%, 50%), hsl(310deg, 100%, 50%), hsl(320deg, 100%, 50%), hsl(330deg, 100%, 50%), hsl(340deg, 100%, 50%), hsl(350deg, 100%, 50%))
+  position: absolute
+  z-index: 10
+  top: 40px
+  right: 100px
+  border-radius: 50%
+  height: 20px
+  width: 20px
+  filter: grayscale(1)
+  transition: filter 0.2s ease-in-out
+
+  &:hover
+    filter: grayscale(0)
+
+  button
+    width: 100%
+    height: 100%
+    background-color: transparent
+    border: 0px
+    outline: none
 
 .no-js .logo
   display: none

@@ -1,9 +1,14 @@
-{{ if site.Params.preloader.enable }}
 {{ "<!-- preloader start -->" | safeHTML }}
+
+{{ $script := resources.Get "js/preloader.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ $script := resources.Get "js/palette.js" | minify}}
+<script type="module" src="{{ $script.Permalink }}"></script>
+
+{{ if site.Params.preloader.enable }}
 <div class="preloader">
-  {{ with site.Params.preloader.preloader }}
-  <img src="{{ . | absURL }}" alt="preloader">
-  {{ end }}
+  <span class="loader"></span>
 </div>
 {{ "<!-- preloader end -->" | safeHTML }}
 {{ end }}

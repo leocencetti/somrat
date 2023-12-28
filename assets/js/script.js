@@ -1,24 +1,6 @@
 (function ($) {
 	'use strict';
 
-	/*--------------------------------
-	 Start Preloader Animation
-	----------------------------------*/
-	$(window).on('load', function () {
-		$('.preloader').fadeOut(100);
-		makeRecaptchaRequired()
-	});
-
-	function makeRecaptchaRequired() {
-	    var el = document.getElementById('g-recaptcha-response');
-	  	if (el) {
-			el.setAttribute('required', 'required');
-	  	}
-    }
-	/*--------------------------------
-        End Preloader Animation
-    ----------------------------------*/
-
 	// -----------------------------
 	//  Count Up
 	// -----------------------------
@@ -48,6 +30,7 @@
 			});
 		}
 	}
+
 	// -----------------------------
 	//  On Scroll
 	// -----------------------------
@@ -306,12 +289,14 @@
 		});
 		// Removing Full-Screen Nav
 		$(".navigation-icon").css("display", "none");
+		$(".randomize-color").css("display", "none");
 	}
 
 	// Code For UC Browser
 	if (navigator.userAgent.indexOf('UCBrowser') != -1) {
 		// Removing Full-Screen Nav
 		$(".navigation-icon").css("display", "none");
+		$(".randomize-color").css("display", "none");
 		$(".fun-facts").css({
 			"display": "table",
 			"margin": "auto"
