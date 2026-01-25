@@ -9,6 +9,7 @@
           {{ with .Params.image }}<img src="{{. | absURL}}" alt="image" class="img-fluid w-100 mb-5">{{ end }}
           <div class="about-me-text mb-4">
             <h1>{{.Title | markdownify}}</h1>
+            <h3>{{.Params.subtitle | markdownify}}</h3>
           </div>
           <div class="content">{{.Content}}</div>
         </div>

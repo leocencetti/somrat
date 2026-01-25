@@ -119,8 +119,8 @@
 
 
 .filtr-item:hover .item-holder img
-  -webkit-transform: translateX(150px)
-  transform: translateX(150px)
+  -webkit-transform: translateX(100%)
+  transform: translateX(100%)
   cursor: pointer
 
 
@@ -138,13 +138,12 @@
   top: 24px
   bottom: 0
   left: 0
-  width: 150px
+  width: 100%
   background: $background-grey
-  -webkit-transform: translateX(-150px)
-  transform: translateX(-150px)
+  -webkit-transform: translateX(-100%)
+  transform: translateX(-100%)
   -webkit-transition: all 0.5s ease-in-out
   transition: all 0.5s ease-in-out
-
 
 .item-caption h2
   font-size: 32px
@@ -152,6 +151,11 @@
   font-weight: 700
   padding-left: 13px
 
+.item-caption h3
+  font-size: 24px
+  font-family: $font
+  font-weight: 600
+  padding-left: 13px
 
 .item-caption p
   padding-left: 16px

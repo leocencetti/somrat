@@ -302,8 +302,8 @@
 <!-- end call to action -->
 
 <!-- Start Portfolio -->
-{{ with .Site.Params.portfolio.enable }}
-{{ with .GetPage "portfolio"}}
+{{ if .Site.Params.portfolio.enable }}
+{{ with $.GetPage "portfolio"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
     <div class="container-fluid text-center">
@@ -339,7 +339,10 @@
                                  <img src="{{ .Params.image | absURL }}" alt="{{ .Title | markdownify }}">
                             </a>
                             <div class="item-caption">
-                                <h2 class="mt-2"><a class="text-white" href="{{.Permalink}}">{{ .Title | markdownify }}</a></h2>
+                                <a class="text-white" href="{{.Permalink}}">
+                                    <h2 class="mt-2">{{ .Title | markdownify }}</h2>
+                                    <h3 class="mb-2">{{ .Params.subtitle | markdownify }}</h3>
+                                </a>
                                 {{ range .Params.categories }}
                                 <p class="mb-0 text-light">{{ . | title }}</p>
                                 {{ end }}
@@ -363,8 +366,8 @@
 <!-- End Portfolio -->
 
 <!-- Start Testimonials -->
-{{ with .Site.Params.testimonials.enable }}
-{{ with .GetPage "testimonial"}}
+{{ if .Site.Params.testimonials.enable }}
+{{ with $.GetPage "testimonial"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
     <div class="container">
@@ -392,8 +395,8 @@
 <!-- End Testimonials -->
 
 <!-- funfacts -->
-{{ with .Site.Params.funfacts.enable }}
-{{ with .GetPage "funfacts"}}
+{{ if .Site.Params.funfacts.enable }}
+{{ with $.GetPage "funfacts"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="wow fadeInUp section-sm {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} data-wow-duration="1.5s">
     <div class="container position-relative z-index-9">
