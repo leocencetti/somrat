@@ -1,5 +1,9 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+{{ if .Site.Config.Services.GoogleAnalytics.ID }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"></script>
+{{ else if .Site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+{{ end }}
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -8,5 +12,9 @@
     }
 
     gtag('js', new Date());
-    gtag('config', '{{ .Site.GoogleAnalytics }}');
+    {{ if .Site.Config.Services.GoogleAnalytics.ID }}
+    gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}');
+    {{ else if .Site.Params.googleAnalytics }}
+    gtag('config', '{{ .Site.Params.googleAnalytics }}');
+    {{ end }}
 </script>
